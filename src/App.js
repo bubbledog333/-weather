@@ -73,7 +73,8 @@ function App() {
           </div>
         )}
       </div>
-    </div>
+   <h2>This weather app is coded by R Gab, and is <a href="https://github.com/bubbledog333/-weather">open-scourced</a></h2>:)</div>
+    
   );
 }
 
