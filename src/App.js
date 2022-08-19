@@ -1,4 +1,3 @@
-import hotBg from "./assets/hot.jpg";
 import coldBg from "./assets/cold.jpg";
 import Descriptions from "./Descriptions";
 import { useEffect, useState } from "react";
@@ -8,7 +7,7 @@ function App() {
   const [city, setCity] = useState("Paris");
   const [weather, setWeather] = useState(null);
   const [units, setUnits] = useState("metric");
-  const [bg, setBg] = useState(hotBg);
+  const [bg, setBg] = useState(coldBg);
 
   useEffect(() => {
     const fetchWeatherData = async () => {
@@ -18,7 +17,7 @@ function App() {
       // dynamic bg
       const threshold = units === "metric" ? 20 : 60;
       if (data.temp <= threshold) setBg(coldBg);
-      else setBg(hotBg);
+      
     };
 
     fetchWeatherData();
@@ -73,7 +72,7 @@ function App() {
           </div>
         )}
       </div>
-   <h2>This weather app is coded by R Gab, and is <a href="https://github.com/bubbledog333/-weather">open-scourced</a></h2>:)</div>
+   <h2>This weather app is coded by R Gab, and is <a href="https://github.com/bubbledog333/-weather">open-scourced</a></h2></div>
     
   );
 }
